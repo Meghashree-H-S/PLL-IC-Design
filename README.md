@@ -41,13 +41,13 @@ Oscillators are mainly used to provide stability in frequency that is under any 
 *Voltage Controlled Oscillator* easily controlled by input voltage, good flexibility, Implemented easily with inverters but have noise and fluctuation in their phase.
 
 The purpose of using the PLL is to mimic the spectral purity of the quartz crystal while maintaining the flexibility. 
-The below Graph(Fig.1) shows the Pure Spectrum and Noisy Spectrum.
+The below Graph shows the Pure Spectrum and Noisy Spectrum.
 
 ![image](https://user-images.githubusercontent.com/44599861/133963017-9a5c1e41-3916-4b24-9351-72a53a071625.png)
 
 **PLL COMPONENTS**
 
-PLL comprises of Phase Frequency Detector(PFD), Charge pump(CP), Loop filter(LPF), Voltage Controlled Oscillator(VCO), and Frequency Divider(FD) blocks (Fig.2)
+PLL comprises of Phase Frequency Detector(PFD), Charge pump(CP), Loop filter(LPF), Voltage Controlled Oscillator(VCO), and Frequency Divider(FD) blocks.
 
 ![image](https://user-images.githubusercontent.com/44599861/133963443-ab9835c1-ef6b-43be-813a-00ee11efb802.png)
 
@@ -59,7 +59,7 @@ Following explains about each block:
 **FD** converts whole system in to frequency multiplier. 
 Here it is divided by 8 that is compared with ref, so that the VCO will be adjusted such that the frequency divided signal matches the reference this in turn means the o/p will be a freq which is a multiple of a reference. In this case 8*reference signal.
 
-**Few Terms**
+**Few Important Terms**
 
 *LOCK RANGE*
 Once locked, the PLL frequency range is able to follow input frequency variations
@@ -83,13 +83,13 @@ so try to do XOR between these two signals and check will it provide any differe
 It can be clearly observed that the XOR is not showing any visible difference, hence we can approach in different method.
 The leading and lagging signal distinguish will help to increase or decrease in phase.
 
-![image](https://user-images.githubusercontent.com/44599861/133965521-4fbea6f1-6550-419c-babc-2049b46b9961.png)
+![image](https://user-images.githubusercontent.com/44599861/134042827-c96a11dd-869a-432d-b807-00458409395f.png)
 
 Up and Down signal help us to indicate lag and lead respectively.
 For down signal, the falling edge of out detected becomes active until falling edge of REF
 For up signal, the falling edge of REF detected becomes active until falling edge of out
 
-![image](https://user-images.githubusercontent.com/44599861/133966031-0365ff09-65a7-4597-b86b-b8013fc78e83.png)
+![image](https://user-images.githubusercontent.com/44599861/134042943-2195dc7a-508c-4d39-a860-e94f9321ceb8.png)
 
 Frequency difference between the signal is captured.
 If the out freq is the higher, the down signal gets activated that means we must slow down the output.
@@ -107,6 +107,7 @@ Fliflops are used to detect the edges.
 ![image](https://user-images.githubusercontent.com/44599861/133966575-85589a01-240b-43b1-853b-e81582079f9c.png)
 
 **Disadvantage**:
+
 Dead Zone issue where PDF is insensitive to phase difference. The output appears to be clipped when signals does not have distinguishable difference 
  
 ## INTRODUCTION TO CHARGE PUMP
@@ -122,9 +123,11 @@ when down signal is active, the output discharges and decreases the voltage.
 ![image](https://user-images.githubusercontent.com/44599861/133967617-8101d2ea-5f2d-4713-8c43-6f83bbe293f2.png)
 ![image](https://user-images.githubusercontent.com/44599861/133967680-0bf522d7-aeb1-407a-a142-229ed4fcf8f3.png)
 
-![image](https://user-images.githubusercontent.com/44599861/133967731-3acc67ef-b3dd-4cc9-9ca4-c2c7a3bd67d7.png)
+![image](https://user-images.githubusercontent.com/44599861/134043384-81eb60fa-e163-4692-8f15-ca2f12fe331b.png)
+![image](https://user-images.githubusercontent.com/44599861/134043313-1913e10f-df78-49f1-ab35-67cc7709fb1f.png)
 
 **Disadvantage**
+
 when up and down transistors are off, there is still a small current flowing through them in form of leakage and the capacitor keeps charging.
 
 The Capacitor is replaced by loop filter because at times the fluctuations occur and also the averaging is not smooth as expected. Loop Filter Stabilizes the PLL and smoothens any fluctuations in the output.
@@ -213,15 +216,22 @@ Bellow are the Operating conditions at which the PLL works.
 
 1.Corner - 'TT'     
   >> TT is Typical Typical, which represent the outcome of the doping process
+
 2.Supply Voltage - 1.8v
+
 3.Room Temperature
+
 4.VCO mode and PLL mode
+
 5.Input Fmin =5Mhz; Fmax = 12.5Mhz
+
 6.Multiplier -8x
+
 7.Jitter(RMS)<~20ns
+
 8.Duty Cycle - 50%
 
-*1,2 and 3 are the PVT(Process, Voltage, Temperature) Corner conditions required here.*
+*1, 2 and 3 are the PVT(Process, Voltage, Temperature) Corner conditions required here.*
 
 **PRELAYOUT**
 
@@ -338,6 +348,16 @@ First row has the charge pump output. Below, up and down signal is seen. Then co
 
 ## LAYOUT DESIGN
 
+## LAYOUT WALKTHROUGH
+
+## PARASITIC EXTRACTION
+
+## POST LAYOUT SIMULATIONS
+
+## STEPS TO COMBINE LAYOUT
+
+## TAPEOUT LABS
+
 
 
 **FEW TROUBLESHOOTING TIPS**
@@ -356,6 +376,22 @@ First row has the charge pump output. Below, up and down signal is seen. Then co
   - If include files in the program is not found, check whether the included file is in the same directory where the .cir file is saved
   - check the names of the included file and the saved file name
 
+**REFERENCE**
+
+https://github.com/lakshmi-sathi/avsdpll_1v8
+https://github.com/google/skywater-pdk/tree/main/libraries
+http://opencircuitdesign.com/magic/
+http://ngspice.sourceforge.net/
+https://github.com/efabless/caravel
+
+**ACKNOWLEDGEMENTS**
+
+Kunal Ghosh, co-founder of VLSI System Design (VSD) Corp. Pvt. Ltd. 
+
+Lakshmi Sathidevi , MS ECE 
+
+
+    
 
 
 
