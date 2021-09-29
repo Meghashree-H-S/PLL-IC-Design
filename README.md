@@ -29,7 +29,7 @@ REFERENCE
 
 ACKNOWLEDGEMENTS
 
-**THEORETICAL**
+### THEORETICAL
 
 ## INTRODUCTION TO PHASE LOCKED LOOP
 
@@ -253,20 +253,17 @@ This is the development stage at which the transistor level simulation of the ci
 
 ![image](https://user-images.githubusercontent.com/44599861/134014814-05e4d001-7c69-40e5-a434-2e1dd91a7e2b.png)
 
-**PRACTICAL**
+### PRACTICAL
 
 ## PLL COMPONENTS CIRCUIT DESIGN
 
-![image](https://user-images.githubusercontent.com/44599861/134015964-571fb0e9-84c4-4518-b776-98dac2a58306.png)
-
-![image](https://user-images.githubusercontent.com/44599861/134016011-7148b49b-9ed4-4261-b750-caa8dc515d3b.png)
+![image](https://user-images.githubusercontent.com/44599861/135150125-eaca5d5a-9c5c-4a83-b014-002b26965f07.png)
 
 touch FD.cir creates an empty file.
 
 Open FD.cir file and type your instructions
 
-![image](https://user-images.githubusercontent.com/44599861/134017176-9340aa83-ae96-44d7-9e85-2ca0c05d502e.png)
-
+![image](https://user-images.githubusercontent.com/44599861/135150194-6ab82622-10ef-4ea4-9c24-94f3e361c693.png)
 
 ## PLL COMPONENETS CIRCUIT SIMULATIONS
 
@@ -274,11 +271,9 @@ Simulation of the code is carried out in ngspice and look in to ouput obtained f
 
 **FREQUENCY DIVIDER**
 
-![image](https://user-images.githubusercontent.com/44599861/134017616-fee38353-098f-4818-b61f-0fa71ac21863.png)
+![image](https://user-images.githubusercontent.com/44599861/135150584-5312619b-d283-438c-987d-302b178417b8.png)
 
-![image](https://user-images.githubusercontent.com/44599861/134017830-48120ab2-c224-4671-93a1-e2a5ad61b264.png)
-
-![image](https://user-images.githubusercontent.com/44599861/134017745-085d4574-e1c3-426c-bc2e-f58c4061ad5b.png)
+![image](https://user-images.githubusercontent.com/44599861/135150783-c5fdd791-e88a-450e-9474-33fbc4dba218.png)
 
 The transient analysis plot is seen and the tran instruction provides the amount of time in the plot. The output is half the frequency of the input, hence the FD is working.
 
@@ -290,9 +285,7 @@ The transient analysis plot is seen and the tran instruction provides the amount
 
 ic is the initial condition of a signal.
 
-![image](https://user-images.githubusercontent.com/44599861/134018334-5188f33f-5b35-4a61-8108-50e7af7ee215.png)
-
-![image](https://user-images.githubusercontent.com/44599861/134018367-d22f3130-74db-430f-9b9b-bdfc81ac63de.png)
+![image](https://user-images.githubusercontent.com/44599861/135151130-3dd0482a-fbea-4b20-8205-f4e365f8abfe.png)
 
 The slope of the signal is very small
 
@@ -300,9 +293,7 @@ The slope of the signal is very small
 
 ![image](https://user-images.githubusercontent.com/44599861/134018715-556cf436-554b-4082-bd24-58935244a17f.png)
 
-![image](https://user-images.githubusercontent.com/44599861/134018750-1efb9359-eaf7-422c-8567-723fc1e74bcf.png)
-
-![image](https://user-images.githubusercontent.com/44599861/134018779-08cd83c3-3796-4c3b-81ad-7c062bf23ba7.png)
+![image](https://user-images.githubusercontent.com/44599861/135151439-6b2b1926-7c6f-4366-8b28-2cf476db0ddd.png)
 
 The expected charactristics is obtained.
 
@@ -312,9 +303,9 @@ v2 is the control signal here
 
 ![image](https://user-images.githubusercontent.com/44599861/134018875-2717e9ce-f1d2-4edb-b736-acba71bdac9b.png)
 
-![image](https://user-images.githubusercontent.com/44599861/134018903-dccc0e9a-c70d-430e-89c9-54d3371e0758.png)
+![image](https://user-images.githubusercontent.com/44599861/135151641-ec2fbdc6-082a-446f-936e-71627ee52ea2.png)
 
-![image](https://user-images.githubusercontent.com/44599861/134018936-daeab811-9624-4ead-8e6d-e5c2e88017ad.png)
+![image](https://user-images.githubusercontent.com/44599861/135151688-1a546b0d-a108-4c82-8dd6-8bfb9a1f187d.png)
 
 Full swing is obtained because an extra inverter is added at the output.
 
@@ -322,9 +313,9 @@ Full swing is obtained because an extra inverter is added at the output.
 
 ![image](https://user-images.githubusercontent.com/44599861/134019050-7bdeba2b-8e07-4e61-a5d3-043ca5b1d754.png)
 
-![image](https://user-images.githubusercontent.com/44599861/134019123-9b3687d0-b011-4ce8-85d6-b014d51885c9.png)
+![image](https://user-images.githubusercontent.com/44599861/135151926-673c070e-7a52-4a39-b979-93520f042fce.png)
 
-![image](https://user-images.githubusercontent.com/44599861/134019187-b914f572-e7da-4c9b-9d42-d147e5683b06.png)
+![image](https://user-images.githubusercontent.com/44599861/135152209-65aa3d12-d221-4473-8109-631f0b892c25.png)
 
 v2 and v3 are two input signals which have phase difference of 6ns. The output is able to detect the slight difference increase
 
@@ -338,29 +329,99 @@ The components are instantiated.
 
 ![image](https://user-images.githubusercontent.com/44599861/134022429-5444321d-2798-48df-8b7c-5a7c735145f5.png)
 
-![image](https://user-images.githubusercontent.com/44599861/134022482-0400de4a-f85c-4ee6-91c9-152a8801e651.png)
+![image](https://user-images.githubusercontent.com/44599861/135152603-4bbd7b4d-e62d-429b-9e60-7b6171403d97.png)
 
-![image](https://user-images.githubusercontent.com/44599861/134022531-53548edb-e35d-4c3f-9d3e-c17f5d4fc471.png)
-
-![image](https://user-images.githubusercontent.com/44599861/134022574-02434836-be53-4a92-bf46-7350ded6f15e.png)
+![image](https://user-images.githubusercontent.com/44599861/135152788-529cc203-5788-4193-bb9d-ce49dcf2db46.png)
 
 First row has the charge pump output. Below, up and down signal is seen. Then comes the output signal and their divided signal by 2 and by 4. Last row is the Reference signal. Actually, all the eight signal are overlapping
 
 ## LAYOUT DESIGN
 
+Using the command in the below figure, the magic tool is opened using sky130A.tech file.
+
+![image](https://user-images.githubusercontent.com/44599861/135152918-9e0fd87c-6a87-4b56-8bbf-2c5272cad2ec.png)
+
+![image](https://user-images.githubusercontent.com/44599861/135152957-0e060e37-c0ee-4911-b7e4-47cb4d1fae68.png)
+
 ## LAYOUT WALKTHROUGH
+
+Each Component layout is shown below.
+
+**FD**
+
+![image](https://user-images.githubusercontent.com/44599861/135153346-e0c141ec-6b5c-4aac-a060-bd5c8ec44dae.png)
+![image](https://user-images.githubusercontent.com/44599861/135153414-431b7fe4-0a0a-4465-81d8-109ec2e47805.png)
+
+**PFD**
+![image](https://user-images.githubusercontent.com/44599861/135153528-e8b6f936-15ea-478b-a229-90307ae361f3.png)
+![image](https://user-images.githubusercontent.com/44599861/135153553-d2343144-1124-423e-96af-8eb0263cadf4.png)
+
+**VCO**
+
+![image](https://user-images.githubusercontent.com/44599861/135153650-3f974708-2cd9-4cc6-90fd-84136f1205df.png)
+![image](https://user-images.githubusercontent.com/44599861/135153680-2c741abc-2b3e-43c7-a210-834927226c8d.png)
+
+**CP**
+
+![image](https://user-images.githubusercontent.com/44599861/135153815-84764fbe-65f9-4344-978c-9e822f8ec6cf.png)
+![image](https://user-images.githubusercontent.com/44599861/135153842-32b61efa-a72d-4d6e-9b4b-780ef175d962.png)
 
 ## PARASITIC EXTRACTION
 
+To extract the information about parasitic components, open the layout, select the layout by pressing i and type commands in the
+tkcon window.
+
+![image](https://user-images.githubusercontent.com/44599861/135159102-68df7e0a-3d51-45cc-8b4c-ab3a2f9c4ab9.png)
+
+![image](https://user-images.githubusercontent.com/44599861/135159147-28751f3e-b19b-4231-871b-80b610eeb14d.png)
+
+![image](https://user-images.githubusercontent.com/44599861/135159212-bae44d80-3cf3-49f4-a829-7e452a48548e.png)
+
+PFD.spice will be created
 ## POST LAYOUT SIMULATIONS
+open and type in the PFD_Postlay.cir
+![image](https://user-images.githubusercontent.com/44599861/135159797-db7de911-1a82-470b-8e63-30f01129e33a.png)
+
+![image](https://user-images.githubusercontent.com/44599861/135205184-ee35f202-6b7b-4636-9881-e74c47442ba1.png)
+
+Press ctrl+s to save
+press ctrl+x to exit
+simulate using ngspice
+
+![image](https://user-images.githubusercontent.com/44599861/135196412-88aed321-8094-455f-97fd-6f3bfd650b06.png)
+
+![image](https://user-images.githubusercontent.com/44599861/135205211-b9b945d8-6c1b-49ce-9443-efc104265fb0.png)
+![image](https://user-images.githubusercontent.com/44599861/135205235-2243108c-12f9-49f6-a79b-dfa8a96945e5.png)
+![image](https://user-images.githubusercontent.com/44599861/135205250-f7450e01-9317-4dca-9405-8ba0ea24dca1.png)
+
 
 ## STEPS TO COMBINE LAYOUT
 
+![image](https://user-images.githubusercontent.com/44599861/135202566-cf524df9-5c2b-4056-b0f3-1d3758c18b43.png)
+![image](https://user-images.githubusercontent.com/44599861/135202600-5d898bef-7db2-48cb-bcbc-d9c0654d48c8.png)
+![image](https://user-images.githubusercontent.com/44599861/135202624-59346dcf-277e-476a-9b72-515f84db3f15.png)
+![image](https://user-images.githubusercontent.com/44599861/135202654-6058e6eb-5185-4aee-b86e-88023315583c.png)
+![image](https://user-images.githubusercontent.com/44599861/135202689-13cecabd-ea2a-4c51-8e86-7719fa86f85e.png)
+![image](https://user-images.githubusercontent.com/44599861/135202717-7da580bf-d7db-4c39-a066-1e156bed1322.png)
+![image](https://user-images.githubusercontent.com/44599861/135202732-da87462b-43b9-4f1c-ac33-765543ac3fd3.png)
+![image](https://user-images.githubusercontent.com/44599861/135202768-cf913f79-8d3c-4529-b716-1110041a545d.png)
+![image](https://user-images.githubusercontent.com/44599861/135202793-ca666b97-a965-4825-a9ea-68171aea2302.png)
+![image](https://user-images.githubusercontent.com/44599861/135202805-dfc78178-5761-4648-90cc-3a26b9cb5897.png)
+
 ## TAPEOUT LABS
 
+![image](https://user-images.githubusercontent.com/44599861/135202980-3e0d1910-30a3-40d9-afab-2323ca547093.png)
+![image](https://user-images.githubusercontent.com/44599861/135203127-92b40c59-6ce9-4c61-8945-4dc2b75a6c02.png)
+![image](https://user-images.githubusercontent.com/44599861/135203194-64a29bb9-8d6b-4a1a-ad14-1350b0ed0e41.png)
+![image](https://user-images.githubusercontent.com/44599861/135203270-906ab4be-2a9f-47d9-8712-ac5c7eec2559.png)
+![image](https://user-images.githubusercontent.com/44599861/135203336-11d3973d-9b09-40d3-a894-e4699093c2bb.png)
+![image](https://user-images.githubusercontent.com/44599861/135203456-fe0794ef-daf6-4307-900d-4a8ffa32f826.png)
+![image](https://user-images.githubusercontent.com/44599861/135203509-d24e0420-41f1-4df8-86dc-a632c4e92e8d.png)
+![image](https://user-images.githubusercontent.com/44599861/135203549-bf7e855a-b88f-4dac-9732-7f40786ce2c1.png)
+![image](https://user-images.githubusercontent.com/44599861/135203909-0c2dc7e0-fbde-44c8-93e5-f06c3252249d.png)
+![image](https://user-images.githubusercontent.com/44599861/135203961-52984420-3dfe-4b57-ac6c-044e2f0aeadd.png)
 
-
-**FEW TROUBLESHOOTING TIPS**
+### FEW TROUBLESHOOTING TIPS
 
 - Look in to the issue arised
 - Before combining, Try simulating each component individually and compare with expected output.
